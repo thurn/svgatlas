@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pixi.js/1.6.1/pixi.js"></script>
+    <script src="svgatlas.js"></script>
+    <script>
+      function init() {
+        var loader = new svgatlas.SvgAtlasLoader(['atlas.svgatlas'], 0.5 /* scale factor */);
+        loader.on('loaded', onSvgLoaded);
+        loader.load();
+       	var stage = new PIXI.Stage(0x66FF99);
+        var renderer = PIXI.autoDetectRenderer(700, 700);
+        document.body.appendChild(renderer.view);
+
+        function onSvgLoaded() {
+          var tiger = PIXI.Sprite.fromFrame('tiger');
+          tiger.position.x = 50;
+          tiger.position.y = 50;
+          stage.addChild(tiger);
+
+          var koala = PIXI.Sprite.fromFrame('koala');
+          koala.position.x = 50;
+          koala.position.y = 400;
+          stage.addChild(koala);
+
+          var dog = PIXI.Sprite.fromFrame('dog');
+          dog.position.x = 400;
+          dog.position.y = 50;
+          stage.addChild(dog);
+
+          var tiger2 = PIXI.Sprite.fromFrame('tiger');
+          tiger2.anchor.x = 0.5;
+          tiger2.anchor.y = 0.5;
+          tiger2.position.x = 500;
+          tiger2.position.y = 500;
+          tiger2.rotation = Math.PI;
+          stage.addChild(tiger2);
+        }
+
+        (function animate() {
+          requestAnimFrame(animate);
+          renderer.render(stage);
+        })();
+      }
+    </script>
+  </head>
+  <body onload="init();">
+  </body>
+</html>

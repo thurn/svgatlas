@@ -1,0 +1,26 @@
+{
+  "file":"atlas.svg",
+  "assets":[
+    {
+      "name":"tiger",
+      "x":0,
+      "y":0,
+      "width":494.461,
+      "height":509.729
+    },
+    {
+      "name":"koala",
+      "x":555,
+      "y":0,
+      "width":440.081,
+      "height":480.274
+    },
+    {
+      "name":"dog",
+      "x":65,
+      "y":565,
+      "width":372.236,
+      "height":364.320
+    }
+  ]
+}
