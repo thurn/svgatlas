@@ -1,40 +1,58 @@
 var svgatlas = {};
 
-svgatlas.SvgAtlasLoader = function(url, scaleFactor, crossorigin) {
+svgatlas.SvgAtlasLoader = function(url, scaleFactor, json, image) {
   PIXI.EventTarget.call(this);
-  this.url = url;
-  this.scaleFactor = scaleFactor;
-  this.crossorigin = crossorigin;
+
+  if (url == null) {
+    this.url = null;
+  } else {
+    this.url = url;
+  }
+
+  if (scaleFactor == null) {
+    this.scaleFactor = 1.0;
+  } else {
+    this.scaleFactor = scaleFactor;
+  }
+
+  if (json == null) {
+    this.json = null;
+  } else {
+    this.json = json;
+  }
+
+  if (image == null) {
+    this.image = null;
+  } else {
+    this.image = image;
+  }
 };
 
 // constructor
 svgatlas.SvgAtlasLoader.prototype.constructor = svgatlas.SvgAtlasLoader;
 
+svgatlas.fromJsonUrl = function(url, scaleFactor) {
+  return new svgatlas.SvgAtlasLoader(url, scaleFactor, null, null);
+};
+
+svgatlas.fromImageElement = function(image, scaleFactor, json) {
+  return new svgatlas.SvgAtlasLoader(null, scaleFactor, null, null);
+};
+
 svgatlas.SvgAtlasLoader.prototype.load = function() {
-  var scope = this;
-
-  if (window.XDomainRequest && scope.crossorigin) {
-    this.ajaxRequest = new window.XDomainRequest();
-    this.ajaxRequest.timeout = 3000;
-
-    this.ajaxRequest.onerror = function () {
-      scope.onError();
-    };
-    this.ajaxRequest.ontimeout = function () {
-      scope.onError();
-    };
-    this.ajaxRequest.onprogress = function() {};
-  } else if (window.XMLHttpRequest) {
-    this.ajaxRequest = new window.XMLHttpRequest();
-  } else {
-    this.ajaxRequest = new window.ActiveXObject('Microsoft.XMLHTTP');
+  if (this.json != null) {
+    this.readFromJSON();
+    return;
   }
 
+  var scope = this;
+
+  this.ajaxRequest = new window.XMLHttpRequest();
   this.ajaxRequest.onload = function(){
     scope.onJSONLoaded();
   };
 
-  this.ajaxRequest.open('GET',this.url,true);
+  this.ajaxRequest.open('GET', this.url, true);
   this.ajaxRequest.send();
 };
 
@@ -43,13 +61,24 @@ svgatlas.SvgAtlasLoader.prototype.onJSONLoaded = function() {
     this.onError();
     return;
   }
+  this.json = JSON.parse(this.ajaxRequest.responseText);
+  this.readFromJSON();
+};
 
-  var json = JSON.parse(this.ajaxRequest.responseText);
-  var filename = json['file'];
-  this.assets = json['assets'];
-  var image = new Image();
-  image.src = filename;
-  image.onload = this.onImageLoaded.bind(this, image);
+
+svgatlas.SvgAtlasLoader.prototype.readFromJSON = function() {
+  this.assets = this.json['assets'];
+
+  if (this.image == null) {
+    this.image = new Image();
+    this.image.src = this.json['file'];
+  }
+
+  if (this.image.complete) {
+    this.onImageLoaded(this.image);
+  } else {
+    this.image.onload = this.onImageLoaded.bind(this, this.image);
+  }
 };
 
 svgatlas.SvgAtlasLoader.prototype.onImageLoaded = function(image) {

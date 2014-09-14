@@ -2,16 +2,16 @@
 <html>
   <head>
   <meta charset="utf-8">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/pixi.js/1.6.1/pixi.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/1.6.1/pixi.js"></script>
     <script src="svgatlas.js"></script>
     <script>
       function init() {
-        var loader = new svgatlas.SvgAtlasLoader(['atlas.svgatlas'], 0.5 /* scale factor */);
-        loader.on('loaded', onSvgLoaded);
-        loader.load();
        	var stage = new PIXI.Stage(0x66FF99);
         var renderer = PIXI.autoDetectRenderer(700, 700);
         document.body.appendChild(renderer.view);
+        var loader = svgatlas.fromJsonUrl('atlas.svgatlas', 0.5 /* scale factor */);
+        loader.on('loaded', onSvgLoaded);
+        loader.load();
 
         function onSvgLoaded() {
           var tiger = PIXI.Sprite.fromFrame('tiger');
@@ -45,6 +45,5 @@
       }
     </script>
   </head>
-  <body onload="init();">
-  </body>
+  <body onload="init();"></body>
 </html>

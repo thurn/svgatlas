@@ -1939,16 +1939,6 @@
        pageopacity="0.0"
        window-y="167"
        current-layer="layer1" />
-    <svg:foreignObject
-       id="foreignObject2678"
-       height="1"
-       width="1"
-       y="0"
-       x="0"
-       requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
-      <i:pgfRef
-         xlink:href="#adobe_illustrator_pgf" />
-    </svg:foreignObject>
     <svg:linearGradient
        gradientTransform="matrix(1.0915837,0,0,1.0915837,-2.0263949,-2.7483415)"
        gradientUnits="userSpaceOnUse"
@@ -2155,16 +2145,6 @@
          offset="1"
          style="stop-color:#003663;stop-opacity:1;" />
     </svg:linearGradient>
-    <svg:foreignObject
-       requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"
-       x="0"
-       y="0"
-       width="1"
-       height="1"
-       id="foreignObject4875">
-      <i:pgfRef
-         xlink:href="#adobe_illustrator_pgf" />
-    </svg:foreignObject>
     <svg:defs
        id="defs4877">
       <svg:rect
@@ -2800,16 +2780,6 @@
          offset="1"
          style="stop-color:#003663;stop-opacity:1;" />
     </svg:linearGradient>
-    <svg:foreignObject
-       requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"
-       x="0"
-       y="0"
-       width="1"
-       height="1"
-       id="foreignObject3363">
-      <i:pgfRef
-         xlink:href="#adobe_illustrator_pgf" />
-    </svg:foreignObject>
     <svg:defs
        id="defs3359">
       <svg:rect
@@ -3785,16 +3755,6 @@
          width="792"
          height="612" />
     </svg:defs>
-    <svg:foreignObject
-       id="foreignObject4398"
-       height="1"
-       width="1"
-       y="0"
-       x="0"
-       requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
-      <i:pgfRef
-         xlink:href="#adobe_illustrator_pgf" />
-    </svg:foreignObject>
     <svg:linearGradient
        id="linearGradient4400">
       <svg:stop
@@ -4140,16 +4100,6 @@
          offset="1"
          style="stop-color:#003663;stop-opacity:1;" />
     </svg:linearGradient>
-    <svg:foreignObject
-       requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"
-       x="0"
-       y="0"
-       width="1"
-       height="1"
-       id="foreignObject5903">
-      <i:pgfRef
-         xlink:href="#adobe_illustrator_pgf" />
-    </svg:foreignObject>
     <svg:defs
        id="defs5910">
       <svg:rect
@@ -6470,33 +6420,6 @@
        i:objectNS="http://ns.adobe.com/Flows/1.0/"
        i:objectType="pointText"
        id="switch6047">
-      <svg:foreignObject
-         requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-         x="0"
-         y="0"
-         width="1"
-         height="1"
-         overflow="visible"
-         id="foreignObject6049">
-        <ns1:flowDef>
-          <ns1:region
-             textMatrix="1 0 0 1 0 0">
-            <ns1:path
-               d="M297.032,383.13" />
-          </ns1:region>
-          <ns1:flow
-             font-family="'Bryant-Regular'"
-             font-size="6">
-            <ns1:p>
-              <ns1:span
-                 clip-path="url(#XMLID_72_)"
-                 fill="#FFFFFF" />
-            </ns1:p>
-          </ns1:flow>
-        </ns1:flowDef>
-        <ns2:targetRef
-           xlink:href="#XMLID_75_" />
-      </svg:foreignObject>
       <svg:g
          clip-path="url(#XMLID_72_)"
          id="g6051">
@@ -6518,33 +6441,6 @@
        i:objectNS="http://ns.adobe.com/Flows/1.0/"
        i:objectType="pointText"
        id="switch6155">
-      <svg:foreignObject
-         requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-         x="0"
-         y="0"
-         width="1"
-         height="1"
-         overflow="visible"
-         id="foreignObject6157">
-        <ns1:flowDef>
-          <ns1:region
-             textMatrix="1 0 0 1 0 0">
-            <ns1:path
-               d="M291.912,390.329" />
-          </ns1:region>
-          <ns1:flow
-             font-family="'Bryant-Regular'"
-             font-size="6">
-            <ns1:p>
-              <ns1:span
-                 clip-path="url(#XMLID_72_)"
-                 fill="#FFFFFF" />
-            </ns1:p>
-          </ns1:flow>
-        </ns1:flowDef>
-        <ns2:targetRef
-           xlink:href="#XMLID_77_" />
-      </svg:foreignObject>
       <svg:g
          clip-path="url(#XMLID_72_)"
          id="g6159">
@@ -6566,33 +6462,6 @@
        i:objectNS="http://ns.adobe.com/Flows/1.0/"
        i:objectType="pointText"
        id="switch5204">
-      <svg:foreignObject
-         requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-         x="0"
-         y="0"
-         width="1"
-         height="1"
-         overflow="visible"
-         id="foreignObject5206">
-        <ns1:flowDef>
-          <ns1:region
-             textMatrix="1 0 0 1 0 0">
-            <ns1:path
-               d="M297.032,383.13" />
-          </ns1:region>
-          <ns1:flow
-             font-family="'Bryant-Regular'"
-             font-size="6">
-            <ns1:p>
-              <ns1:span
-                 clip-path="url(#XMLID_72_)"
-                 fill="#FFFFFF" />
-            </ns1:p>
-          </ns1:flow>
-        </ns1:flowDef>
-        <ns2:targetRef
-           xlink:href="#XMLID_75_" />
-      </svg:foreignObject>
       <svg:g
          clip-path="url(#XMLID_72_)"
          id="g5208">
@@ -6614,33 +6483,6 @@
        i:objectNS="http://ns.adobe.com/Flows/1.0/"
        i:objectType="pointText"
        id="switch5214">
-      <svg:foreignObject
-         requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-         x="0"
-         y="0"
-         width="1"
-         height="1"
-         overflow="visible"
-         id="foreignObject5216">
-        <ns1:flowDef>
-          <ns1:region
-             textMatrix="1 0 0 1 0 0">
-            <ns1:path
-               d="M291.912,390.329" />
-          </ns1:region>
-          <ns1:flow
-             font-family="'Bryant-Regular'"
-             font-size="6">
-            <ns1:p>
-              <ns1:span
-                 clip-path="url(#XMLID_72_)"
-                 fill="#FFFFFF" />
-            </ns1:p>
-          </ns1:flow>
-        </ns1:flowDef>
-        <ns2:targetRef
-           xlink:href="#XMLID_77_" />
-      </svg:foreignObject>
       <svg:g
          clip-path="url(#XMLID_72_)"
          id="g5218">
@@ -6662,33 +6504,6 @@
        i:objectNS="http://ns.adobe.com/Flows/1.0/"
        i:objectType="pointText"
        id="switch3448">
-      <svg:foreignObject
-         requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-         x="0"
-         y="0"
-         width="1"
-         height="1"
-         overflow="visible"
-         id="foreignObject3450">
-        <ns1:flowDef>
-          <ns1:region
-             textMatrix="1 0 0 1 0 0">
-            <ns1:path
-               d="M297.032,383.13" />
-          </ns1:region>
-          <ns1:flow
-             font-family="'Bryant-Regular'"
-             font-size="6">
-            <ns1:p>
-              <ns1:span
-                 clip-path="url(#XMLID_72_)"
-                 fill="#FFFFFF" />
-            </ns1:p>
-          </ns1:flow>
-        </ns1:flowDef>
-        <ns2:targetRef
-           xlink:href="#XMLID_75_" />
-      </svg:foreignObject>
       <svg:g
          clip-path="url(#XMLID_72_)"
          id="g3452">
@@ -6710,33 +6525,6 @@
        i:objectNS="http://ns.adobe.com/Flows/1.0/"
        i:objectType="pointText"
        id="switch3458">
-      <svg:foreignObject
-         requiredExtensions="http://ns.adobe.com/Flows/1.0/"
-         x="0"
-         y="0"
-         width="1"
-         height="1"
-         overflow="visible"
-         id="foreignObject3460">
-        <ns1:flowDef>
-          <ns1:region
-             textMatrix="1 0 0 1 0 0">
-            <ns1:path
-               d="M291.912,390.329" />
-          </ns1:region>
-          <ns1:flow
-             font-family="'Bryant-Regular'"
-             font-size="6">
-            <ns1:p>
-              <ns1:span
-                 clip-path="url(#XMLID_72_)"
-                 fill="#FFFFFF" />
-            </ns1:p>
-          </ns1:flow>
-        </ns1:flowDef>
-        <ns2:targetRef
-           xlink:href="#XMLID_77_" />
-      </svg:foreignObject>
       <svg:g
          clip-path="url(#XMLID_72_)"
          id="g3462">

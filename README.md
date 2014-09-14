@@ -6,7 +6,9 @@ svgatlas is a simple tool for using SVG files with the pixi.js rendering engine.
 
 The atlas loader takes a scale parameter which lets you scale the SVGs prior to rasterizing them. This lets you render SVGs on the fly to the perfect size for the user's screen resolution and still have them be perfectly sharp, while allowing you to take advantage of the considerable performance improvements associated with manipulating bitmaps via canvas and WebGL.
 
-![Results](image.png?raw=true =312x641)
+**Note**: SVG files containing <svg:foreignObject> elements will not render in Chrome for security reasons. Another known issue is that images do not render at all in Internet Explorer because context.drawImage() throws an exception for an unknown reason.
+
+![Results](results.png?raw=true =602x646)
 
 ## .svgatlas file format
 
@@ -34,7 +36,7 @@ There's currently no automatic way to generate an svgatlas file from a given svg
 ## Example usage
 
 ```javascript
-  var loader = new svgatlas.SvgAtlasLoader(['atlas.svgatlas'], 0.5 /* scale factor */);
+  var loader = svgatlas.fromJsonUrl('atlas.svgatlas', 0.5 /* scale factor */);
   loader.on('loaded', function() {
     var tiger = PIXI.Sprite.fromFrame('tiger');
     // Do something with tiger sprite
